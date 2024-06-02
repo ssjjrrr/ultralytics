@@ -1,7 +1,7 @@
 ---
 comments: true
-description: Discover YOLOv5u, a boosted version of the YOLOv5 model featuring an improved accuracy-speed tradeoff and numerous pre-trained models for various object detection tasks.
-keywords: YOLOv5u, object detection, pre-trained models, Ultralytics, Inference, Validation, YOLOv5, YOLOv8, anchor-free, objectness-free, real-time applications, machine learning
+description: Explore YOLOv5u, an advanced object detection model with optimized accuracy-speed tradeoff, featuring anchor-free Ultralytics head and various pre-trained models.
+keywords: YOLOv5, YOLOv5u, object detection, Ultralytics, anchor-free, pre-trained models, accuracy, speed, real-time detection
 ---
 
 # YOLOv5
@@ -36,7 +36,7 @@ This table provides a detailed overview of the YOLOv5u model variants, highlight
 
     === "Detection"
 
-    See [Detection Docs](https://docs.ultralytics.com/tasks/detect/) for usage examples with these models trained on [COCO](https://docs.ultralytics.com/datasets/detect/coco/), which include 80 pre-trained classes.
+    See [Detection Docs](../tasks/detect.md) for usage examples with these models trained on [COCO](../datasets/detect/coco.md), which include 80 pre-trained classes.
 
     | Model                                                                                       | YAML                                                                                                           | size<br><sup>(pixels) | mAP<sup>val<br>50-95 | Speed<br><sup>CPU ONNX<br>(ms) | Speed<br><sup>A100 TensorRT<br>(ms) | params<br><sup>(M) | FLOPs<br><sup>(B) |
     |---------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------------|----------------------|--------------------------------|-------------------------------------|--------------------|-------------------|
@@ -66,16 +66,16 @@ This example provides simple YOLOv5 training and inference examples. For full do
         from ultralytics import YOLO
 
         # Load a COCO-pretrained YOLOv5n model
-        model = YOLO('yolov5n.pt')
+        model = YOLO("yolov5n.pt")
 
         # Display model information (optional)
         model.info()
 
         # Train the model on the COCO8 example dataset for 100 epochs
-        results = model.train(data='coco8.yaml', epochs=100, imgsz=640)
+        results = model.train(data="coco8.yaml", epochs=100, imgsz=640)
 
         # Run inference with the YOLOv5n model on the 'bus.jpg' image
-        results = model('path/to/bus.jpg')
+        results = model("path/to/bus.jpg")
         ```
 
     === "CLI"
