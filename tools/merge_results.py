@@ -125,7 +125,7 @@ def process_all_images(image_dir, slice_dir, output_dir, base_width, base_height
 if __name__ == "__main__":
 
     image_dir = "/home/edge/work/datasets/PANDA_dataset/images/val"
-    slice_dir = "/home/edge/work/ultralytics/runs/detect/predict23/labels"
+    slice_dir = "/home/edge/work/ultralytics/runs/detect/predict26/labels"
     output_dir = slice_dir[:-1] + "_merged_results"
     
     process_all_images(image_dir, slice_dir, output_dir, base_width, base_height, overlap, image_width, image_height, iou_threshold)
